@@ -251,6 +251,10 @@ header{
 			/*color: #999;*/
 		}
 
+		#projects article .project-summary{
+			color: #ccc;
+		}
+
 		#projects article .descr, #other-projects article .descr{
 		  overflow:hidden;
 		  transition:max-height 2s ease-in-out;

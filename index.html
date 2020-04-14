@@ -13,18 +13,41 @@
 		<h1>Thomas Gainant</h1>
 	</header>
 	<section>
-		<div id="avatar"><div class="filter"></div><img src="thomas-gainant.jpg"/></div>
+		<div id="avatar"><div class="filter"></div><img src="thomas-gainant.png"/></div>
 		<h2>About</h2>
-		<p>Welcome to my webpage, I am <span class="bold">Thomas Gainant</span>. Born and raised in Limoges, near <span class="bold">Bordeaux</span>, France, I am currently working as an artificial intelligence software developer for <a href="https://www.ics-group.eu">ICS International</a> in our <span class="bold">Berlin</span> office, in Germany.</p>
-		<p>I also worked as a freelance software developer and as a gameplay developer for a few video game studios. I am highly interested in computer programming, game design and software development and am lucky to have made my career out of these interests.</p>
+		<p>Welcome to my webpage, I am <span class="bold">Thomas Gainant</span>. Born and raised in Limoges, near <span class="bold">Bordeaux</span>, France, I am currently working as a senior software developer for <a href="https://www.ics-group.eu">ICS International</a> in our <span class="bold">Berlin</span> office, in Germany.</p>
+		<p>I also worked as a freelance software developer and as a gameplay developer for a few video game studios. I am highly interested in computer programming, game design and software engineering and am lucky to have made my career out of these interests.</p>
 		<p>I am also passionate about music and make some on my free time. My tastes range from black metal to classical music, passing through dark electro and EBM.</p>
-		<p>My various other interests also cover history, ufology, occultism and fathers' rights.</p>
+		<p>My various other interests also cover history, ufology, <a href="http://www.ssvrotation-badminton.de/">badminton</a>, rugby, occultism, <a href="https://www.eisbaeren.de/">ice hockey</a> and linguistics.</p>
 	</section>
 	<section id="projects" class="clear">
 		<h2>Projects</h2>
 		<article>
+			<h3><span class="icons quite-big"></span> cyclop</h3>
+			<p class="project-summary right bold">High speed database management system :: 2019</p>
+			<div class="descr collapsed">
+				<h4>General</h4>
+				<img class="project small" src="https://raw.githubusercontent.com/thomasgainant/cyclop/master/logo.png"/>
+				<p>Cyclop is a high speed database solution based the <a href="https://en.wikipedia.org/wiki/Linked_list">linked list technique</a>.<br/>This database system saves objects as a list of chained pointers in order to improve parsing speed and therefore the speed of query handling.</p>
+				<h4>Goal</h4>
+				<p>The goal was to offer a very simple, yet high speed database management system. Something that you use in a system that requires speed and simplicity on top of functionality because you need to save computing power for something else. Machine learning or real time applications like video games would be good examples. Web applications would not be. Database speed optimization seems to be easy at first but in details proves to be quite painstaking. It sometimes takes a lot to lower the handling of your query to a few milliseconds. But these few milliseconds can make a huge difference when they are multiplied by a millions queries per second!</p>
+				<p>This project was inspired by the linked list technique that we previously used in our custom video game engine at <a href="http://www.dsc-studio22.fr/">Studio 22</a>. This technique would be a good optimization solution for such problem. We built our first games on mobile with the goal of making it work on the most crappy Android 2 phones ever. This involved a highly memory and computing efficient, multiplatform game engine. Unity was still too early stage, so we wrote our game engine in C++, using JNI to call OpenGL ES 2 functions. Every game entities would then have pointers to a next game entity for updating purpose: no need for complex iterations systems, an entity would update and then tell the next one to update when done.</p>
+				<img class="project small" src="https://raw.githubusercontent.com/thomasgainant/cyclop/master/Singly-linked-list.png" alt="Linked list"/>
+				<p>I also had a conversation with <a href="https://www.linkedin.com/in/jean-jacques-delmont-97798634/">Jean-Jacques Delmont</a> about his previous handling of hierarchical databases during his career as a Cobol developer in the 70s.</p>
+				<p>This friend of mine told me how hellish it was to write code on paper, then give it to someone else for compilation. The databases used where hierarchical: a saved object could have children but the link from bottom to top was difficult. Yet, speed was better than in the database systems which later followed in history. This conversation inspired me. I was also inspired by the No-SQL/document-oriented database systems, which later showed more performance than white elephants like Postgre and other SQL systems which compiled a lot of features often barely used. I wanted then to mix all these ideas together into my own database engine.</p>
+				<p>The goal was also to involve more people into this, as a real open source project. This will be possible when the code provides a few more features... and when I have time to focus on this.</p>
+				<h4>Tech</h4>
+				<p>cyclop has been programmed in plain ECMAScript 2017 on <a href="https://nodejs.org/">node.js</a> 8. <span class="bold">There is no dependencies in the project.</span> This was an important point for me, as I wanted to have something optimized and secured. Staying away from the npm mess and sticking to the official http and fs node modules was the best way to do this.</p>
+				<p>The goal of using those slightly "old school" versions of node and ES was to make sure there was no retro-compatibilities problems. The project has then been tested on <span class="bold">node 12</span> and works perfectly fine. This is sometimes the advantage of using outdated technologies: you go more low level, thus insuring it will work everywhere on newer platforms and it will work in a better optimised way.</p>
+				<h4>Links</h4>
+				<ul>
+					<li><a href="https://github.com/thomasgainant/cyclop"><span class="icons big">&nbsp;</span>GitHub</a></li>
+				</ul>
+			</div>
+		</article>
+		<article>
 			<h3><span class="icons quite-big"></span> esos</h3>
-			<p class="right bold">Expenses & money management app :: 2018</p>
+			<p class="project-summary right bold">Expenses & money management app :: 2018</p>
 			<div class="descr collapsed">
 				<h4>General</h4>
 				<img class="project small" src="medias/esos.png"/>
@@ -41,7 +64,7 @@
 				<p>esos has been made with <a href="https://reactjs.org/">React</a> and <a href="https://redux.js.org/">Redux</a>, using the programming language <span class="bold">Javascript</span> (ECMAScript 6/2015). Porting to mobile was made by simply using a webview container with <a href="https://cordova.apache.org/">Cordova</a>. Data storage is made using the <span class="bold">local storage</span> of this container. Styling is based on the <a href="https://picnicss.com">Picnic CSS</a> library. Special visual effects like the pie charts are made using <span class="bold">HTML5 Canvas</span>.</p>
 				<h4>Links</h4>
 				<ul>
-					<li><a href="#"><span class="icons big">&nbsp;</span>GitHub</a></li>
+					<li><a href="https://github.com/thomasgainant/esos"><span class="icons big">&nbsp;</span>GitHub</a></li>
 				</ul>
 			</div>
 		</article>
@@ -57,7 +80,7 @@
 		</article>-->
 		<article>
 			<h3><span class="icons quite-big"></span> Matière noire</h3>
-			<p class="right bold">Cosmic black metal musical project :: 2009 - ?</p>
+			<p class="project-summary right bold">Cosmic black metal musical project :: 2009 - ?</p>
 			<div class="descr collapsed">
 				<h4>General</h4>
 				<p>Mixing atmospheric black metal with dark electro vibes, depicting physics theories, metaphysical philosophy and extraterrestrial life.</p>
@@ -73,7 +96,7 @@
 		</article>
 		<article>
 			<h3><span class="icons quite-big"></span> Energy Heroes</h3>
-			<p class="right bold">TPS / MOBA desktop game :: 2014 - 2015</p>
+			<p class="project-summary right bold">TPS / MOBA desktop game :: 2014 - 2015</p>
 			<div class="descr collapsed">
 				<h4>General</h4>
 				<p>"Energy Heroes" was a video game which aimed to mix the complexity and required cleverness in a MOBA game with the tension and simplicity of a Third Person Shooter. To sum up: mixing Gears of War with League of Legends.</p>
@@ -96,7 +119,7 @@
 		</article>
 		<article>
 			<h3><span class="icons quite-big"></span> Le Bal des Bobards</h3>
-			<p class="right bold">Satirical puzzle game :: 2016</p>
+			<p class="project-summary right bold">Satirical puzzle game :: 2016</p>
 			<div class="descr collapsed"><br>
 				<a href="http://twothirds.fr/bal-des-bobards/" class="block center"><img class="inline-block project" src="http://twothirds.fr/medias/bal-des-bobards.png"/></a>
 				<p>Satirical 2D browser game created on Unity3d in response to the different 2016-2017 elections in France.</p>
@@ -108,7 +131,7 @@
 		</article>
 		<article>
 			<h3><span class="icons quite-big"></span> Wacky Docks!</h3>
-			<p class="right bold">Action mobile game :: 2015</p>
+			<p class="project-summary right bold">Action mobile game :: 2015</p>
 			<div class="descr collapsed">
 				<p>Mobile action game created on Unity3d as a kick start project to my former freelancer business.</p>
 				<a class="block center" href="http://twothirds.fr/wackydocks/"><img class="project inline-block" src="http://twothirds.fr/wackydocks/screen1.png"/></a>
@@ -181,38 +204,72 @@
 		<h2>Experience</h2>
 		<table>
 			<tr>
-				<td><span class="bold">AI software developer</span></td><td><a href="https://www.abmsoft.de/">abmsoft GmbH</a>, <br/><a href="https://www.ics-group.eu">ICS IT-Logistik Systeme GmbH</a></td><td>Berlin, <br/>Deutschland <span class="flag-icon flag-icon-de"></span></td><td><span id="currentJobDuration" class="bold"></span><br/>March 2018 - ?</td>
+				<td><span class="bold">Senior software developer</span></td><td><a href="https://www.ics-group.eu">ICS IT-Logistik Systeme GmbH</a>, <br/><a href="https://www.abmsoft.de/">abmsoft GmbH</a></td><td>Berlin, <br/>Deutschland <span class="flag-icon flag-icon-de"></span></td><td><span id="currentJobDuration" class="bold"></span><br/>March 2018 - ?</td>
+			</tr>
+			<tr>
+				<td colspan="4" class="left">
+					<p>Software solutions and artificial intelligence projects in logistics.</p>
+					<p>Two main projects:</p>
+					<ul>
+						<li>A web application for managing trainings and professional driver licenses in accordance to german and european laws, working fullstack on it. The technical stack is composed of: <span class="bold">OpenAPI 3, Angular 8, Bootstrap 4, .NET Core 3.1, deployed on Azure DevOps</span>.</li>
+						<li>An artificial intelligence project, focused on storage and supermarkets navigation optimisation. The technical stack is: <span class="bold">node.js, .NET Core 3.1, JAX-RS, Android 10 with Kotlin</span>. My main focus on this project is the central service, built on <span class="bold">node.js 12 with Express, following OpenAPI 2 specifications (ex-Swagger), with both Microsoft SQL, MySQL and in memory databases</span>.</li>
+					</ul>
+					<p>Other projects:</p>
+					<ul>
+						<li>Reinforcing the Android team in a middle of a mobile application project, based on <span class="bold">Android 8 and Java</span>. Mostly on UI modifications and API calls</li>
+						<li>Bugfixing on <span class="bold">ASP.NET 3.5</span> web portals using <span class="bold">DevExpress</span></li>
+					</ul>
+				</td>
 			</tr>
 			<tr>
 				<td><span class="bold">Fullstack & software developer & CEO</span></td><td><a href="twothirds.fr">twothirds.fr</a> †</td><td>Bordeaux, <br/>France <span class="flag-icon flag-icon-fr"></span></td><td><span class="bold">2 years 9 months</span><br/>April 2015 - February 2018</td>
 			</tr>
 			<tr>
+				<td colspan="4" class="left">
+					<p>Various missions as a freelancer, all as a software developer or a fullstack web developer:</p>
+					<ul>
+						<li><a href="https://www.thalesgroup.com/">Thales</a>: "<a href="https://www.polarsys.org/capella/">Capella</a>" open source modeling project (<span class="bold">Eclipse RCP, Eclipse EMF: Java 8</span>)</li>
+						<li><a href="https://www.labanquepostale.fr/">La Banque Postale</a>: "Cap Client 2.0" CRM (<span class="bold">Angular 1, Java EE</span>)</li>
+						<li>Sopra-Steria for Groupe Leclerc: Project "Isocel" - Web project for rebuilding  "Galec", a countrywide purchasing service for the supermarket brand <a href="http://www.e-leclerc.com/">Leclerc</a> (<span class="bold">Spring: Java EE & Gatling: Scala</span>)</li>
+						<li><a href="https://www.francetelevisions.fr/">France Télévisions</a>: Software props and fake web sites for for the shows "<a href="https://www.france.tv/france-3/mongeville/">Mongeville</a>" and "<a href="https://www.france.tv/series-et-fictions/telefilms/482475-parole-contre-parole.html">Parole contre parole</a>" <span class="bold">(PHP/HTML/CSS)</span></li>
+						<li><a href="https://www.sunna-design.com/">Sunna Design</a>: "<a href="http://sunna-moon.com/">Moon by Sunna</a>" low cost mobile phone project (<span class="bold">Cordova & node.js: javascript</span>)</li>
+						<li><a href="https://www.limousin-archerie.fr/">Limousin Archerie</a>: E-commerce website maintenance <span class="bold">PHP (Prestashop)</span></li>
+						<li>Bègue Oenologie: E-commerce website maintenance <span class="bold">PHP/HTML/CSS</span></li>
+					</ul>
+				</td>
+			</tr>
+			<tr>
 				<td><span class="bold">Game producer & gameplay developer</span></td><td><a href="http://www.dsc-studio22.fr">DSC Studio22</a></td><td>Bordeaux, <br/>France <span class="flag-icon flag-icon-fr"></span></td><td><span class="bold">3 years 6 months</span><br/>December 2011 - March 2015</td>
+			</tr>
+			<tr>
+				<td colspan="4" class="left"><p>Developed video games on PC and Android (<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=464346518">Energy Heroes</a>, Tremble Human Beings, Aukdyssey...). This position included:</p>
+					<ul>
+						<li>Managing a team of up to 15 game developers</li>
+						<li>Compiling and testing the game design decisions</li>
+						<li>Programming the gameplay of our games (<span class="bold">Unreal Engine 3, Android 2 with a custom game engine written in Java and C++ through NDK, Unity with C#</span>)</li>
+					</ul>
+				</td>
 			</tr>
 			<tr>
 				<td><span class="bold">Gameplay developer</span></td><td><a href="http://beview.fr">Beview</a></td><td>Bordeaux, <br/>France <span class="flag-icon flag-icon-fr"></span></td><td><span class="bold">5 months</span><br/>July 2011 - November 2011</td>
 			</tr>
 			<tr>
+				<td colspan="4" class="left">Worked on <span class="bold">Virtual Battle Space 2 (serious game engine in C++ forked from the game engine behind Arma 2)</span> for a military strategy serious game ordered by the R&D department of the french army (<a href="https://www.defense.gouv.fr/dga">Direction Générale de l'Armement</a>)</td>
+			</tr>
+			<tr>
 				<td><span class="bold">Web developer</span></td><td><a href="http://www.ecolefrancaisedepoker.fr">École Française de Poker</a> †</td><td>Limoges, <br/>France <span class="flag-icon flag-icon-fr"></span></td><td><span class="bold">4 months</span><br/>December 2010 - March 2011</td>
 			</tr>
+			<tr>
+				<td colspan="4" class="left">Code maintenance of a community web site dedicated to poker, written in <span class="bold">PHP</span></td>
+			</tr>
 		</table>
-		<h3>Freelancing clients</h3>
-		<ul>
-			<li><a href="https://www.thalesgroup.com">Thales</a> - <a href="https://www.polarsys.org/capella/">"Capella"</a> modeling open source project</li>
-			<li><a href="https://www.labanquepostale.fr/">La Banque Postale</a> - Cap Client 2.0 project</li>
-			<li>Leclerc Isocel - Rebuilding of "Galec", the central purchasing service of <a href="http://www.e-leclerc.com/">Groupe Leclerc</a></li>
-			<li><a href="https://www.francetelevisions.fr/">France Télévisions</a> - Software props for the shows <a href="https://www.france.tv/france-3/mongeville/">"Mongeville"</a> and <a href="https://www.france.tv/series-et-fictions/telefilms/482475-parole-contre-parole.html">"Parole contre parole"</a></li>
-			<li><a href="https://www.sunna-design.com/">Sunna Design</a> - <a href="http://sunna-moon.com/">"Moon by Sunna"</a> project</li>
-			<li><a href="https://www.limousin-archerie.fr/">Limousin Archerie</a> - E-commerce maintenance</li>
-			<li>Bègue Oenologie - E-commerce maintenance</li>
-		</ul>
 		<h3>Education</h3>
 			<ul>
 				<li>
-					Bachelor in game and level design :: Gamagora, Université Lyon 2 :: 2010
+					Bachelor in game and level design :: <a href="https://icom.univ-lyon2.fr/gamagora">Gamagora</a>, Université Lyon 2 :: 2010
 				</li>
 				<li>
-					Bachelor in web and multimedia development :: IUT du Limousin :: 2009
+					Bachelor in web and multimedia development :: <a href="https://www.iut.unilim.fr/les-formations/dut/metiers-du-multimedia-et-de-linternet/">IUT du Limousin</a> :: 2009
 				</li>
 				<li>
 					Baccalaureate in electronics :: Lycée Turgot :: 2006
@@ -231,17 +288,26 @@
 				<td><span class="bold">Web designer</span></td><td><a href="http://www.madcowpictures.com/">Mad Cow Pictures</a></td><td>Sydney, <br/>Australia <span class="flag-icon flag-icon-au"></span></td><td><span class="bold">3 months</span><br/>April 2009 - June 2009</td>
 			</tr>
 		</table>
+		<h3>Other</h3>
+		<ul>
+			<li><span class="bold">Part-time software development teacher</span><br/><a href="https://www.hs-mannheim.de/">Hochschule Mannheim</a> - September to November 2019</li>
+			<li><span class="bold">Video game development enthusiast</span><br/>Participating in multiple gamejams as game designer and gameplay developer - <a href="https://ldjam.com/">Ludum Dare</a>, <a href="https://globalgamejam.org/">Global Game Jam</a>, <a href="https://amaze-berlin.de/">A Maze</a> - since 2011</li>
+			<li><span class="bold">Volunteer security agent</span><br/><a href="https://www.facebook.com/TheInsaneLegions/">The Insane Legions</a> - Non-profit association organising metal
+			concerts in France - 2015 - 2017</li>
+			<li><span class="bold">Amateur musician</span><br/><a href="https://www.youtube.com/channel/UCPE35V2nL686pQ3UxygBRdA">Matière noire</a> - Ambient / Metal music project - since 2010</li>
+		</ul>
 	</section>
 	<section>
 		<h2>Links</h2>
 		<ul class="inline-links">
-			<li><a href="cv.pdf"><span class="icons big">&nbsp;</span>CV</a></li>
+			<li><a href="cv thomas gainant 2020.pdf"><span class="icons big">&nbsp;</span>CV</a></li>
 			<li><a href="https://www.linkedin.com/in/thomas-gainant-58084b15/"><span class="icons big">&nbsp;</span>LinkedIn</a></li>
 			<li><a href="https://www.xing.com/profile/Thomas_Gainant/"><span class="icons big">&nbsp;</span>Xing</a></li>
 			<li><a href="https://github.com/thomasgainant"><span class="icons big">&nbsp;</span>Github</a></li>
+			<li><a href="./log"><span class="icons big">&nbsp;</span>Log</a></li>
 		</ul>
 	</section>
-	<footer>Last update: February, 2019 - Contact me via <a href="mailto:thomasgainant ɐɫ gmail ďǾȶÇϙϻ"><span class="icons big">&nbsp;</span>email</a></footer>
+	<footer>Last update: April, 2020 - Contact me via <a href="mailto:thomasgainant ɐɫ gmail ďǾȶÇϙϻ"><span class="icons big">&nbsp;</span>email</a></footer>
 	<script type="text/javascript" src="fabric.js"></script>
 	<script type="text/javascript" src="moment.js"></script>
 	<script type="text/javascript" src="thomas-gainant.js"></script>
