@@ -97,19 +97,19 @@ ul{
                 display: inline-block;
                 position: relative;
                 height: 100%;
-                max-height: 93%;
+                max-height: 97%;
                 max-width: 25%;
                 box-sizing: border-box;
                 overflow: hidden;
                 white-space: wrap;
                 vertical-align: bottom;
 
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
+                top: 0%;
+                bottom: 0%;
+                left: 0%;
+                right: 0%;
                 margin: 3px;
-                margin-bottom: 0;
+                margin-bottom: 0%;
                 padding: 3px;
 
                 /*background-color: #B5C2B7;*/
@@ -251,9 +251,9 @@ ul{
     box-sizing: border-box;
     overflow: auto;
     white-space: nowrap;
-    padding-top: 0;
+    padding-top: 0%;
     padding-left: 3%;
-    padding-right: 0;
+    padding-right: 0%;
 }
 #content .page.portrait #experiencesBelow{
     position: relative;
@@ -261,7 +261,7 @@ ul{
     height: auto;
     min-width: auto;
     overflow: hidden;
-    padding-bottom: 0;
+    padding-bottom: 0%;
     padding-left: 0%;
     padding-right: 3%;
 }
@@ -291,8 +291,8 @@ ul{
     margin-bottom: 0;
 }
 #content .page.portrait .experience:hover{
-    top: 0;
-    bottom: 0;
+    top: 0%;
+    bottom: 0%;
     left: -3%;
     right: 3%;
 }
@@ -302,8 +302,8 @@ ul{
     vertical-align: middle;
 }
 #content .page.portrait #experiencesBelow .experience:hover{
-    top: 0;
-    bottom: 0;
+    top: 0%;
+    bottom: 0%;
     left: 3%;
     right: -3%;
 }

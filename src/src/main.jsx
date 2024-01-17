@@ -6,17 +6,18 @@ import {
 } from "react-router-dom";
 import './style.css';
 
-import { useRef, useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+
+import { Page } from './page'
 
 /*
     TODOs
-    -Scroll en portrait donne un décalage
     -Affichage d'une frise temporelle avec les années
     -Ajout de life lines sur les côtés de la frise qui représente les périodes de chaque expérience
-    -Switch vers des experiences placées en position absolue sue l'échelle du temps
+    -Switch vers des experiences placées en position absolue sur l'échelle du temps
 */
 
-const experienceList = [
+export const experienceList = [
   {
       id: 1,
       title: 'Blueberry Harvester',
@@ -213,7 +214,7 @@ const experienceList = [
   }
 ];
 
-const useResize = (myRef) => {
+export const useResize = (myRef) => {
     const [width, setWidth] = useState(0)
     const [height, setHeight] = useState(0)
     
@@ -235,7 +236,7 @@ const useResize = (myRef) => {
     return { width, height }
 }
 
-const useScroll = (componentRef) => {
+export const useScroll = (componentRef) => {
     const [offsetX, setOffsetX] = useState(0);
     const [offsetY, setOffsetY] = useState(0);
 
@@ -292,166 +293,6 @@ function AppRoot() {
         </div>
         <RouterProvider router={router} />
     </div>);
-}
-
-const portraitLimit = 800;
-
-function Page({content}){
-    let pageContent = null;
-    let pageContentBelow;
-
-    const componentRef = useRef();
-
-    const { width } = useResize(componentRef);
-
-    const [height, setHeight] = useState({});
-    const [containerWidth, setContainerWidth] = useState({});
-    const [scrollX, setScrollX] = useState({});
-    const [scrollY, setScrollY] = useState({});
-
-    const [portraitMode, setPortraitMode ] = useState(false);
-    
-    if(content == "experience"){
-        pageContent = <ExperienceContainer portraitMode={portraitMode} setHeight={setHeight} setWidth={setContainerWidth} setScrollX={setScrollX} setScrollY={setScrollY} experienceList={experienceList}/>;
-        pageContentBelow = <ExperienceContainerBelow portraitMode={portraitMode} height={height} width={containerWidth} scrollX={scrollX} scrollY={scrollY} experienceList={experienceList}/>;
-    }
-    else if(content == "about"){
-        pageContent = 
-        <div>
-            <div id="photoWrapper">
-                <div id="photoFilter"></div>
-                <img id="photo" src="/moi.png"/>
-            </div>
-            <div id="description">
-                <p>Welcome to my personal website!</p>
-                <p>I am a 1988 born software developer, raised in small city in southwestern France, currently living in Berlin, Germany.</p>
-                <p>I love building stuff on my computer since my teenage years. I think the real spur was when I realised I could create my own levels on my still favourite game of all time: Half-Life. Until that day, I could barely stay a day away from my machine. I am a real introvert who grew up in a culture of extraverts, so I feel lucky to have been able to build my career out of such hobby.<br/>
-                I have a multimedia development degree and on top of this a game design degree. I worked for a few years in the video game industry and still have a passion for creating video games. I am always fiddling with game development und love using Unity3d in game jams.</p>
-                <p>I love learning languages but am currently stuck with learning my fifth: polish, a tough one. I am also learning since a decade the dialect of my grand parents, occitan.<br/>
-                One of my other passion is history, particularly military history in the XVIIIth century.<br/>
-                I am also involved in music, especially black metal. I have a music project myself which mixes my musical tastes and my interest in ufology.<br/>
-                I have a passion for the self-defence sport krav maga, which gave me more self-confidence and discipline. I also love to watch hockey and rugby.</p>
-                <p>Appono astos! Love is the law! Stand up straight with your shoulders back! Work on leaving a worthy legacy! And enjoy your stay here below!</p>
-            </div>
-            <div id="links">
-                <h2>Links</h2>
-                <nav>
-                    <a href="/cv.pdf" target="_blank">My CV</a>
-                    <a href="https://www.github.com/thomasgainant" target="_blank">My GitHub account</a>
-                    <a href="https://www.linkedin.com/in/thomas-gainant-58084b15/" target="_blank">My LinkedIn profile</a>
-                    <a href="mailto:thomas@thomas-gainant.eu">thomas@thomas-gainant.eu</a>
-                </nav>
-            </div>
-        </div>;
-    }
-
-    useEffect(() => {
-        if(width > 0 && width < portraitLimit)
-            setPortraitMode(true);
-        else
-            setPortraitMode(false);
-    }, [width]);
-
-    return (<div ref={componentRef} className={"page"+(portraitMode ? " portrait " : "")}>{pageContent}{pageContentBelow}</div>);
-}
-
-function ExperienceContainer({portraitMode, setHeight, setWidth, setScrollX, setScrollY, experienceList}){
-    const componentRef = useRef();
-
-    const { width, height } = useResize(componentRef);
-    const { offsetX, offsetY } = useScroll(componentRef);
-
-    useEffect(() => {
-        setHeight(height);
-        setWidth(width);
-        setScrollX(offsetX);
-        setScrollY(offsetY);
-    }, [height, width, offsetX, offsetY]);
-
-    const experienceItems = experienceList.toReversed().map(experience => {
-        return <Experience
-            key={experience.id}
-            belowMode={false}
-            portraitMode={portraitMode}
-            experience={experience}
-        ></Experience>;
-    });
-    return (<div ref={componentRef} id="experiences">{experienceItems}</div>);
-}
-
-function ExperienceContainerBelow({portraitMode, height, width, scrollX, scrollY}){
-    const componentRef = useRef();
-    const wrapperComponentRef = useRef();
-
-    useEffect(() => {
-        if(componentRef.current){
-            if(!portraitMode){
-                wrapperComponentRef.current.style.top = "0";
-                wrapperComponentRef.current.style.left = "-"+scrollX+"px";
-                if(width > 0)
-                    componentRef.current.style.width = width+"px";
-            }
-            else{
-                wrapperComponentRef.current.style.top = "-"+scrollY+"px";
-                wrapperComponentRef.current.style.left = "0";
-                if(height > 0)
-                    componentRef.current.style.height = height+"px";
-            }
-        }
-    }, [componentRef, portraitMode, height, width, scrollX, scrollY]);
-
-    const experienceItems = experienceList.toReversed().map(experience => {
-        return <Experience
-            key={experience.id}
-            belowMode={true}
-            portraitMode={portraitMode}
-            experience={experience}
-        ></Experience>;
-    });
-
-    return (<div ref={componentRef} id="experiencesBelow"><div ref={wrapperComponentRef} className="wrapper">{experienceItems}</div></div>);
-}
-
-function Experience({portraitMode, belowMode, experience}){
-    let tagItems = null;
-    if(experience.tags != null && experience.tags.length){
-        tagItems = experience.tags.map((tag, tagIndex) => {
-            let name = "";
-            let type = null;
-
-            if(tag.type != null){
-                name = tag.name;
-                type = tag.type;
-            }
-            else{
-                name = tag;
-            }
-
-            return (<ExperienceTag key={tagIndex} tag={name} type={type}/>)
-        });
-    }
-
-    let visibilityClassName = (
-        (portraitMode && !belowMode && !experience.secondary) || (portraitMode && belowMode && experience.secondary)
-        || (!portraitMode && !belowMode && experience.secondary) || (!portraitMode && belowMode && !experience.secondary)
-    ) ? ' hidden ' : ' visible ';
-
-    return (
-        <div className={"experience"+(experience.secondary ? " secondary ":"")+(visibilityClassName)+(experience.linkedNext != null ? " linkedNext ":"")+(experience.linkedPrevious != null ? " linkedPrevious ":"")}>
-            <div className="experienceWrapper">
-                <h2>{experience.title}</h2>
-                <h2 className="altTitle">{experience.altTitle}</h2>
-                <div className="company" dangerouslySetInnerHTML={{__html: experience.company}}></div>
-                <div className="location">{experience.location} :: {experience.startDate} -&gt; {experience.endDate != null ? ''+experience.endDate : '?'}</div>
-                <div className="content" dangerouslySetInnerHTML={{__html: experience.content}}></div>
-                <div className="tags">{tagItems}</div>
-            </div>
-        </div>
-    );
-}
-
-function ExperienceTag({tag, type}) {
-    return (<div className={"tag"+(type != null ? " type"+type+"" : "")}>{tag}</div>);
 }
 
 const container = document.getElementById('root');
