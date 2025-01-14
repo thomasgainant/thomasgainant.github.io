@@ -1,9 +1,10 @@
 import { useState, useRef, useEffect } from 'react';
 
-import { experienceList, useResize } from './main';
+import { projectList, experienceList, useResize } from './main';
+import { Projects } from './projects';
 import { ExperienceContainer, ExperienceContainerBelow } from './experiences';
 
-const portraitLimit = 800;
+const portraitLimit = 800000;
 
 export function Page({content}){
     let pageContent = null;
@@ -21,13 +22,16 @@ export function Page({content}){
     const [portraitMode, setPortraitMode ] = useState(false);
     const [experiencesMinHeight, setExperiencesMinHeight] = useState({});
     
-    if(content == "experience"){
+    if(content == "projects"){
+        pageContent = <Projects projects={projectList}></Projects>;
+    }
+    else if(content == "experience"){
         pageContent = <ExperienceContainer portraitMode={portraitMode} setHeight={setHeight} setWidth={setContainerWidth} setScrollX={setScrollX} setScrollY={setScrollY} experienceList={experienceList} experiencesMinHeight={experiencesMinHeight} setExperiencesMinHeight={setExperiencesMinHeight}/>;
         pageContentBelow = <ExperienceContainerBelow portraitMode={portraitMode} height={height} width={containerWidth} scrollX={scrollX} scrollY={scrollY} experienceList={experienceList} experiencesMinHeight={experiencesMinHeight} setExperiencesMinHeight={setExperiencesMinHeight}/>;
     }
     else if(content == "about"){
         pageContent = 
-        <div>
+        <div id='about'>
             <div id="photoWrapper">
                 <div id="photoFilter"></div>
                 <img id="photo" src="/moi.png"/>
