@@ -2,7 +2,7 @@ import { Project } from "./project";
 
 export function Projects({projects}){
     const projectItems = projects.map((project) => {
-        return (<Project project={project}></Project>)
+        return (<Project key={project.id} project={project}></Project>)
     });
 
     return (

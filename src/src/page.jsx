@@ -71,6 +71,6 @@ export function Page({content}){
     return (<div
         ref={componentRef}
         className={"page"+(portraitMode ? " portrait " : "")}
-        style={content == "about" ? { "overflow": "auto", "height": "auto" } : {}}
+        style={content == "projects" || content == "about" ? { "overflow": "auto", "height": "auto" } : {}}
         >{pageContent}{pageContentBelow}</div>);
 }

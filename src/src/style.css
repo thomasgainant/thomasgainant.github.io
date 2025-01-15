@@ -420,3 +420,9 @@ ul{
     #links nav a{
         display: block;
     }
+
+@media (max-width: 800px) {
+    #content .page #projects .content{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
