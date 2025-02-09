@@ -40,8 +40,6 @@
       }
 
       #wrapper{
-        display: flex;
-
         height: 100%;
         width: 100%;
 
@@ -51,19 +49,57 @@
         justify-content: center;
         align-items: center;
       }
+        #geht-waehlen-2025{
+          width: 100%;
+          text-align: center;
+          padding-bottom: 10px;
+        }
+          #geht-waehlen-2025 img{
+            max-height: 50px;
+          }
+
+          #geht-waehlen-2025 p{
+            margin: 0;
+          }
 
         #content{
-          margin-left: 5%;
-          margin-right: 5%;
+          width: 100%;
+          box-sizing: border-box;
         }
+
+        #description{
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+          #newsletter{
+            padding-bottom: 10px;
+          }
     </style>
+
+    <!-- MailerLite Universal -->
+    <script>
+      (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+      .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+      n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+      (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+      ml('account', '1335180');
+    </script>
+    <!-- End MailerLite Universal -->
   </head>
   <body style="text-align: center; padding: 0; border: 0; margin: 0;">
     <div id="wrapper">
+      <div id="geht-waehlen-2025">
+        <img src="./geht-waehlen.png"/>
+        <p><a href="https://www.bundeswahlleiterin.de/bundestagswahlen/2025.html">Geht wählen!</a></p>
+      </div>
+
       <div id="content">
         <canvas id="unity-canvas" width=800 height=600 tabindex="-1" style="width: 800px; height: 600px; background: #1F1F20"></canvas>
         <script src="Build/Le Bal des Bobards Web.loader.js"></script>
         <script>
+          var canvas = document.querySelector("#unity-canvas");
+          var matchWebGLToCanvasSize = true;
+
           if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
             // Mobile device style: fill the whole browser client area with the game canvas:
             var meta = document.createElement('meta');
@@ -71,13 +107,18 @@
             meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
             document.getElementsByTagName('head')[0].appendChild(meta);
 
-            var canvas = document.querySelector("#unity-canvas");
-            canvas.style.width = window.width+"px";
-            canvas.style.height = computeCanvasHeight()+"px";
-            canvas.style.position = "fixed";
-
-            document.body.style.textAlign = "left";
+            console.log("Mobile display mode with width: "+window.innerWidth);
+            //canvas.style.width = "100%";
+            //canvas.style.height = "100%";
+            //canvas.style.position = "absolute";
+            //canvas.style.top = "0";
+            canvas.style.zIndex = "9999999";
+            //document.body.style.textAlign = "left";
+            matchWebGLToCanvasSize = false;
           }
+          
+          canvas.style.width = computeWidth()+"px";
+          canvas.style.height = computeCanvasHeight()+"px";
 
           createUnityInstance(document.querySelector("#unity-canvas"), {
             arguments: [],
@@ -87,22 +128,40 @@
             streamingAssetsUrl: "StreamingAssets",
             companyName: "Thomas Gainant - twothirds.fr",
             productName: "Le Bal des Bobards",
-            productVersion: "0.6",
-            // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+            productVersion: "0.7",
+            matchWebGLToCanvasSize: matchWebGLToCanvasSize, // Uncomment this to separately control WebGL canvas render size and DOM element size.
             // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
           });
 
+          function computeWidth(){
+            let width = parseFloat(document.querySelector("html").clientWidth);
+            return width <= 800.0 ? width : 800.0;
+          }
+
           function computeCanvasHeight(){
-            let ratio = 600/800;
-            return parseFloat(window.width) * ratio;
+            let ratio = 600.0/800.0;
+            return parseFloat(computeWidth()) * ratio;
           }
         </script>
+      </div>
+
+      <div id="description">
+        <div>
+          <h1>Der Luegenball</h1>
+          <p>Ein Spiel von Thomas Gainant, veröffentlicht von <a href="http://twothirds.fr">http://twothirds.fr</a></p>
+          <p>Sie werden in einer landesweiten Sendung in Ihrem schönen Land, Pfuschland, interviewt und müssen möglichst viele Wähler in Pfuschland davon überzeugen, bei den nächsten Kanzlerwahlen für Sie zu stimmen. Jedes Argument ist erlaubt!</p>
+          <p>Die politische Zugehörigkeit der Wähler ist zufällig und Sie müssen so vielen Menschen wie möglich gefallen! Wenn der Journalist Ihnen eine Frage stellt, drücken Sie 1, 2 oder 3, um eine Antwort auszuwählen.</p>
+        </div>
 
         <div>
           <h1>Le Bal des Bobards</h1>
           <p>Un jeu créé par Thomas Gainant, édité par <a href="http://twothirds.fr">http://twothirds.fr</a></p>
           <p>Interviewé lors d'une émission d'envergure nationale dans votre beau pays qu'est la Rance, vous devez convaincre un maximum d'électeurs rançais de voter pour vous aux prochaines élections présidentielles. Tout argument est permis !</p>
           <p>L'affiliation des électeurs est aléatoire et vous devez plaire au plus grand nombre ! Lorsque le journaliste vous pose une question, appuyez sur 1, 2 ou 3 pour choisir une réponse.</p>
+        </div>
+
+        <div id="newsletter">
+          <div class="ml-embedded" data-form="7O6iaZ"></div>
         </div>
       </div>
     </div>
