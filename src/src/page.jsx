@@ -1,8 +1,9 @@
 import { useState, useRef, useEffect } from 'react';
 
-import { projectList, experienceList, useResize } from './main';
+import { projectList, experienceList, useResize, logEntries } from './main';
 import { Projects } from './projects';
 import { ExperienceContainer, ExperienceContainerBelow } from './experiences';
+import { Log } from './log';
 
 const portraitLimit = 800000;
 
@@ -28,6 +29,9 @@ export function Page({content}){
     else if(content == "experience"){
         pageContent = <ExperienceContainer portraitMode={portraitMode} setHeight={setHeight} setWidth={setContainerWidth} setScrollX={setScrollX} setScrollY={setScrollY} experienceList={experienceList} experiencesMinHeight={experiencesMinHeight} setExperiencesMinHeight={setExperiencesMinHeight}/>;
         pageContentBelow = <ExperienceContainerBelow portraitMode={portraitMode} height={height} width={containerWidth} scrollX={scrollX} scrollY={scrollY} experienceList={experienceList} experiencesMinHeight={experiencesMinHeight} setExperiencesMinHeight={setExperiencesMinHeight}/>;
+    }
+    else if(content == "weblog"){
+        pageContent = <Log entries={logEntries}/>;
     }
     else if(content == "about"){
         pageContent = 

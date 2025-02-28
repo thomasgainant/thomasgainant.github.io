@@ -253,6 +253,33 @@ export const experienceList = [
   }
 ];
 
+export const logEntries = [
+    {
+        title: "Der Lügenball",
+        date: "16.02.2025",
+        content: `<p>Hallo an alle!</p>
+<p>Ihr wisst vielleicht, dass ich vor langer Zeit ein kleines, kostenloses Webspiel im Rahmen der Wahlen in meinem Heimatland entwickelt hatte. Ziel des Spiels war, als ein Politiker alles zu sagen, was man sagen muss, um sich bei möglichst vielen Menschen beliebt zu machen.</p>
+<p>Ich lebe seit acht Jahren in Deutschland, habe aber noch nicht die deutsche Staatsbürgerschaft. Von daher habe ich leider nicht die Möglichkeit, bei den nächsten Wahlen nächste Woche meine Stimme abzugeben.</p>
+<p>Meine Botschaft für diese Wahlen wäre: geht wählen!</p>
+<p>Aber meine zweite Botschaft wäre auch: wählt richtig! Hört nicht auf die Marktschreier, die auf den aktuellen Ereignissen reiten, um von sich reden zu machen, **unabhängig von ihrer politischen Orientierung**.</p>
+<p>Im Zuge der Wahlen in Deutschland wollte ich diese Botschaft hinter diesem Spiel zurückgeben und habe das Spiel auf Deutsch übersetzt. Probiert es aus und teilt euren positiven Meinungsrekord!</p>
+<div class="picture">
+        <a href="/le-bal-des-bobards"><img src="./bal-des-bobards.png"/></a>
+</div>`
+    },
+    {
+        title: "Grey on Grey - v2024.04",
+        date: "13.05.2024",
+        content: `<p>I just finished a new version of the game!</p>
+<p>It is still a private project and only people in my social circle will be testing this version. I hope the next iteration will bring some sort of public version.&nbsp;Please do not forget that this project is built on my free time. Most of my commits on the code are between 9pm and 2am, nothing else. The rest of the day, I have a real job and I sometimes have to sleep! Well, I actually would <strong>love</strong> to sleep but I also have a charming&nbsp;toddler which requires some sort of maintenance, like playing&nbsp;with her and telling her she is my favourite human being in the world. It can be&nbsp;tough sometimes, right?</p>
+<p>Here is the changelog for this version:
+</p>
+<ul><li>The third type of the basic units is implemented: the game has now artillery.</li><li>Soldiers can now sometimes be stunned and will crawl for a while when there is an explosion close to them</li><li>Squad deployment is only possible in the controlled zone in front of the frontline, like intended as a base game mechanics of my game concept. I also added a visual feedback on the map&nbsp;showing that.</li><li>UI improvement: there is now a "progress bar", which represents which part of the frontline is advancing or falling. There is also a&nbsp;fast travel when you click on it.</li><li>UI improvements: the squad badges on the field and in the bottom menu have now more information about the squad. I also included&nbsp;tooltips when you hover these badges.</li><li>I did a big round of game variables balancing (mostly weapon accuracy and speed).</li><li>A start&nbsp;menu has been added.</li><li>Enhanced sound effects, switching to external sound effects instead of the game engine's default sound filters.</li><li>I fixed a nasty bug preventing a unit to retreat in order with we give this order.</li></ul>
+<p>My goal for the next version will be to have the game playable by strangers,&nbsp;probably as in the form of&nbsp;a closed beta. But I first have some important game mechanics in mind, like ammo consuption, resupply and the possiblity to deploy ammo cache/storage.</p>
+<p>Stay tuned!</p>`
+    }
+];
+
 export const useResize = (myRef) => {
     const [width, setWidth] = useState(0)
     const [height, setHeight] = useState(0)
@@ -310,7 +337,7 @@ const router = createHashRouter([
         element: <Page content={"projects"}></Page>,
     },
     {
-        path: "/weblog",
+        path: "/log",
         element: <Page content={"weblog"}></Page>,
     },
     {
@@ -326,7 +353,7 @@ function AppRoot() {
             <nav id="links">
                 <a href="/#/projects">Projects</a>
                 <a href="/#/experience">Experience</a>
-                {/*<a href="/#/weblog">Weblog</a>*/}
+                <a href="/#/log">Log</a>
                 <a href="/#/about">About</a>
             </nav>
         </div>

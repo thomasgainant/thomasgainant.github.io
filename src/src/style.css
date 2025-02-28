@@ -88,7 +88,7 @@ ul{
 
                 margin: 3%;
 
-                background-color: hsl(219, 21%, 90%);
+                background-color: hsl(218, 22%, 90%);
             }
             #content .page #projects .project:hover{
                 background-color: hsl(219, 21%, 85%);
@@ -385,6 +385,50 @@ ul{
     left: 3%;
     right: -3%;
 }
+
+/*
+    Weblog
+*/
+#log{
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    overflow: auto;
+
+    place-items: center;
+}
+    #log .log-entry{
+        max-width: 500px;
+
+        margin-bottom: 3%;
+        padding-bottom: 3%;
+
+        border-bottom: #47546c 3px dotted;
+    }
+        #log .log-entry h2{
+            margin: 0;
+            padding: 1%;
+
+            background-color: #47546c;
+            color: white;
+        }
+
+        #log .log-entry .date{
+            text-align: right;
+        }
+
+        #log .log-entry .entry-content{
+            padding-top: 1%;
+        }
+            #log .log-entry .entry-content .picture{
+                display: flex;
+                flex-direction: column;
+                place-items: center;
+            }
+                #log .log-entry .entry-content .picture img{
+                    max-width: 100%;
+                }
 
 /*
     About page
