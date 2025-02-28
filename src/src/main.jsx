@@ -255,8 +255,10 @@ export const experienceList = [
 
 export const logEntries = [
     {
+        id: "der-luegenball",
         title: "Der Lügenball",
         date: "16.02.2025",
+        originalLink: "https://www.linkedin.com/feed/update/urn:li:activity:7296866403070988288/",
         content: `<p>Hallo an alle!</p>
 <p>Ihr wisst vielleicht, dass ich vor langer Zeit ein kleines, kostenloses Webspiel im Rahmen der Wahlen in meinem Heimatland entwickelt hatte. Ziel des Spiels war, als ein Politiker alles zu sagen, was man sagen muss, um sich bei möglichst vielen Menschen beliebt zu machen.</p>
 <p>Ich lebe seit acht Jahren in Deutschland, habe aber noch nicht die deutsche Staatsbürgerschaft. Von daher habe ich leider nicht die Möglichkeit, bei den nächsten Wahlen nächste Woche meine Stimme abzugeben.</p>
@@ -268,8 +270,10 @@ export const logEntries = [
 </div>`
     },
     {
+        id: "grey-on-grey-v-2024-04",
         title: "Grey on Grey - v2024.04",
         date: "13.05.2024",
+        originalLink: "https://thomasgainant.itch.io/grey-on-grey/devlog/730993/202404",
         content: `<p>I just finished a new version of the game!</p>
 <p>It is still a private project and only people in my social circle will be testing this version. I hope the next iteration will bring some sort of public version.&nbsp;Please do not forget that this project is built on my free time. Most of my commits on the code are between 9pm and 2am, nothing else. The rest of the day, I have a real job and I sometimes have to sleep! Well, I actually would <strong>love</strong> to sleep but I also have a charming&nbsp;toddler which requires some sort of maintenance, like playing&nbsp;with her and telling her she is my favourite human being in the world. It can be&nbsp;tough sometimes, right?</p>
 <p>Here is the changelog for this version:

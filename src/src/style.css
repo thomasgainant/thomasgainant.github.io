@@ -414,9 +414,23 @@ ul{
             color: white;
         }
 
-        #log .log-entry .date{
-            text-align: right;
+        #log .log-entry .info{
+            display: flex;
+            place-content: end;
+            align-items: flex-end;
         }
+            #log .log-entry .info .original-link{
+                margin-right: 1%;
+                font-size: 1.2rem;
+                font-weight: bold;
+            }
+                #log .log-entry .info .original-link a{
+                    text-decoration: none;
+                }
+
+            #log .log-entry .info .date{
+                margin-top: 0.6rem;
+            }
 
         #log .log-entry .entry-content{
             padding-top: 1%;
