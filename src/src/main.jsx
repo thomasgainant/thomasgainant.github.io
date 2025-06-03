@@ -255,6 +255,29 @@ export const experienceList = [
 
 export const logEntries = [
     {
+        id: "petite-anecdote-polonaise",
+        title: "Petite anecdote polonaise",
+        date: "03.06.2025",
+        originalLink: "https://www.facebook.com/516573607/posts/pfbid02dCUt8G64cpo1QWWz2zi5ioe4K3RBdDs2jtyD2kmnDic9HuaJnixBXxSz79tAydEpl/",
+        content: `<p>Petite anecdote polonaise vu que je n'ai plus trop de raisons de me retenir et vu le climat politique ambiant en Europe.</p>
+<p>Séjour à Poznan pour que la petite profite à nouveau de l’aquapark, comme promis il y a bien longtemps. On se retrouve à chercher un parking pour visiter le centre ville et, passant une barrière grande ouverte qui mène vers un parc de stationnement privé, je vais à la caisse pour savoir quand et comment on doit payer, histoire d'éviter le piège à touristes.</p>
+<p>Je me retrouve à cette caisse face à un croisement de Pierre Bellemare et Shrek qui aurait trop loupé ses séances d'UV, joliment couperosé depuis probablement ses seize ans et pour qui visiblement une encyclopédie révèle plus du calage de meuble que de la source objective d'informations.</p>
+<p>Faisant fi de mes préjugés d'occidental arrogant, je m'approche du monsieur et, après l'avoir salué sommairement dans la langue de Marie Skłodowska, je lui demande, ne pouvant m'exprimer suffisamment correctement dans son langage, s'il parle anglais. Ou bien allemand. Ou bien français.</p>
+<p>À chaque question, il rit. Mais quelle idée de ma part de demander à un professionnel faisant face quotidiennement à des tombereaux de touristes de s'exprimer sommairement parmi un panel de langues qui permettent de couvrir environ les deux tiers de la population d’Europe ? Qu'à cela ne tienne, la transaction s'effectue via Google translate et je passe la rigolade assumée de ce monsieur.</p>
+<p>Mais vint le soir et le moment pour moi de payer. Visiblement la soirée était bien entamée vu les vapeurs éthyliques émanant de la cahute et l'élocution de mon hôte devenue légèrement hasardeuse. Avec lui, un ami est venu regarder sur le lieu de travail un match de football, qui passe sur une télé derrière eux.</p>
+<p>PSG joue contre l'Inter. Je n'aime pas le foot et encore moins le PSG. Mais bref, je suis là pour payer ma place et si possible sans trop parler vu les différences de langage et le manque criant d’atomes crochus entre nous. Je le salue à nouveau et lui tend mon billet. Le coquin apostrophe son collègue : " Lui, il ne comprend pas.”</p>
+<p>Mais, cher être difforme, ta langue, je ne la parle pas encore bien, ce n'est pas que je ne la comprends pas.</p>
+<p>Il continue en polonais : “C'est parce qu'il parle africain.”</p>
+<p>Je regarde la télé et  je revois le PSG avec son équipe parisienne typiquement bigarrée. Mon accent français m’a auparavant trahi. Alors que son collègue s’exclaffe de rire, je comprends enfin le racisme incroyable de la blague, que j’ai déjà entendu plusieurs fois de la part de Polonais du cru. À chaque fois mon hilarité était modeste et l’inculture agricole que j’observais en face me laissait perplexe.</p>
+<p>Le lendemain, je me levai avec une information dont en vérité j’en ai absolument rien à foutre : Paris a gagné 5 - 0 en finale. Pas un petit 2 - 1 mais bel et bien une distribution de fessées. Je compris enfin l’ire de ce monsieur et son trait resplendissant de la veille. Lorsque nous sommes allés nous garer dans le même parking ce jour là, je me suis précipité vers la cahute pour entonner un chant que jamais je n’aurais imaginé vouloir chanter : “Pariiis eeest magiiique !!”</p>
+<p>Mais le bougre n'était pas là en ce beau matin ! Probablement trop occupé à digérer les tomes de philosophie liquide qu’il avait parcouru toute la soirée avec son ami. Ma déception n’était toutefois qu’infime. Je commençai à assumer pleinement cette arrogance occidentale.</p>
+<p>Car très vite le souvenir de l’insulte de la veille me rappela que pendant que ce triste personnage brûlait certainement dans sa poêle à charbon ses emballages plastiques Tatra pour se chauffer l’hiver, des noirs, NOS noirs, faisaient la queue pour venir vivre chez nous, gagner leur vie dans NOTRE pays et pour être ou devenir des Français.</p>
+<p>Pour être des gens qui disent bonjour en rentrant dans une maison, qui bouffent trop, trop souvent et trop longtemps, qui baisent sans vouloir faire trop d’enfants, qui demandent comment ça va même si uniquement ce protocole les forcent à sortir de leur mauvaise humeur, qui gueulent pour oui ou pour un non, qui mangent leur baguette pas trop cuite, PAS brûlée et qui, car trop gentils et polis, se font aussi bouffer par les véritables païens de ce monde qui brûlent des voitures à la moindre opportunité ou voient encore le mariage non comme une aventure à deux mais comme une simple transaction financière.</p>
+<p>Des gens trop gentils face à ce genre d’énergumènes au degré de civilisation en dessous de l’acceptable, peu importe leur bord ou le dieu qu’il vénère… mais le paradoxe réside dans le fait que la civilisation et la civilité consiste justement à accepter et faire preuve de compassion face à ce genre d’énergumènes. Lourd fardeau, lourde croix à porter dirais-je même.</p>
+<p>Mais c'est ça, la culture française, celle qui attire des gens de par le globe et les poussent à inscrire leurs gosses immigrés de deuxième ou troisième génération au club de foot de banlieue parisienne. Et la banlieue influence Paris. Et Paris influence LE MONDE.</p>
+<p>Et ça, ça rend fier, bordel à cul de putain de nom de dieu de merde.</p>`
+    },
+    {
         id: "der-luegenball",
         title: "Der Lügenball",
         date: "16.02.2025",
