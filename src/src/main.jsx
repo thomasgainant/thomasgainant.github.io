@@ -255,6 +255,27 @@ export const experienceList = [
 
 export const logEntries = [
     {
+        id: "how-ai-makes-software-engineering-easier-and-faster-or-not",
+        title: "How AI makes software engineering easier and faster (or not)",
+        date: "29.06.2025",
+        originalLink: "https://www.linkedin.com/posts/thomas-gainant-58084b15_totally-true-tweet-ive-read-articles-activity-7345145264208314369-pPci",
+        content: `<h3>How AI makes software engineering easier and faster</h3>
+        <ul>
+<li>Big picture questions like "how should I structure my app with features A, B and C, using the framework XYZ?", something that search engines and Stack Overflow were not offering</li>
+<li>Typical noobie questions for a framework or technology that you never used, like: "how do you intercept a response in Angular and modify its content?", "how does trilinear filtering work in a graphic engine?"</li>
+<li>Specific technical questions on a niche feature, if you explain the context through and through, describe the structure of your app or infrastructure (or better: have a nice subscription to Claude which gives you a >50k code lines context) which will give better odds for the result of the algorithm. Example: "in the controller XYZController, when I use the createSomeEntity endpoint, I am not getting the field XYZ of said entity although it is marked as serializable and should be included in the response JSON. What am I missing?"</li>
+<li>Creating simple CRUD apps from scratch, without any legacy codebase: "Give me a backend app using NestJS with a simple user, product & order management system, with register, login, order a product & lost password functionalities."</li>
+</ul>
+<h3>How AI does *not* make software engineering easier and faster</h3>
+<ul>
+<li>Having team leads and product managers create an app themselves without reading or understanding a single line of the generated code and then giving it to developers saying: "See? I already did your job. What's wrong with you guys? Are you getting paid spending your time on Youtube?"</li>
+<li>Having CCQ specialists merging Pull Requests without any testing, breaking production, because AI told them to change a single line inside a pom.xml or a package.json and "it's just a microscopic change".</li>
+<li>Pushing veteran software engineers out of the door, those who spent 15 to 20 years in your company learning your own business logic and building the existing code base to automatize said business processes, all because "the code they produced is bad: 'the AI' cannot understand it".</li>
+<li>Thinking that word-suggestion algorithms (ChatGPT, Claude, Cursor... well, the whole new "AI" wave) offer deterministic solutions instead of answers whose probability of functioning depends on the amount of training data on the problem in question.</li>
+</ul>
+<p>All of these examples are direct testimonies from my SE friends or me, by the way.</p>`
+    },
+    {
         id: "petite-anecdote-polonaise",
         title: "Petite anecdote polonaise",
         date: "03.06.2025",
