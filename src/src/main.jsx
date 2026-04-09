@@ -19,15 +19,16 @@ import { Page } from './page'
 
 export const projectList = [
     {
-        id: 1,
-        thumbnail: "bal-des-bobards.png",
-        name: "Le Bal des Bobards",
-        link: "/le-bal-des-bobards",
-        description: "Political and satirical web game created in response to the different 2016-2017 primary elections in France.",
-        date: "2016 - 2017"
+        id: 0,
+        thumbnail: "twothirds-logo.png",
+        name: "twothirds.fr",
+        subname: "My own software company",
+        link: "https://twothirds.fr/",
+        description: "Created for freelancing missions and internal projects in multimedia and gaming.",
+        date: "2015 - ?"
     },
     {
-        id: 2,
+        id: 3,
         thumbnail: "/matiere noire.png",
         name: "Matière Noire",
         subname: "Matière Noire",
@@ -37,16 +38,16 @@ export const projectList = [
         date: "2015 - ?"
     },
     {
-        id: 3,
-        thumbnail: "/matiere-noire-poussiere-d-etoiles.jpg",
-        name: "Poussière d'Étoiles",
-        subname: "Matière Noire",
-        link: "https://matierenoire.bandcamp.com/album/poussi-re-d-toiles-demo",
-        description: "The demo from my ambient one man black metal musical project.",
-        date: "2009 - 2016"
+        id: 1,
+        thumbnail: "scale.svg",
+        name: "Who Pays What?",
+        subname: "A shared bill calculation tool",
+        link: "https://who-pays-what.com/",
+        description: "Made to avoid arguments about who pays what in a couple or a group of friends, this app calculates what everyone in a group has to pay, based on the incomes of each person.",
+        date: "2025"
     },
     {
-        id: 4,
+        id: 5,
         thumbnail: "/mots-melanges-feather.png",
         name: "Mots Mélangés",
         link: "https://mots-melanges.com/",
@@ -54,6 +55,23 @@ export const projectList = [
         Built to test the new features of a new frontend framework version and compare it with the old ones.",
         date: "2024"
     },
+    {
+        id: 2,
+        thumbnail: "bal-des-bobards.png",
+        name: "Le Bal des Bobards",
+        link: "/le-bal-des-bobards",
+        description: "Political and satirical web game created in response to the different 2016-2017 primary elections in France.",
+        date: "2016 - 2017"
+    },
+    {
+        id: 4,
+        thumbnail: "/matiere-noire-poussiere-d-etoiles.jpg",
+        name: "Poussière d'Étoiles",
+        subname: "Matière Noire",
+        link: "https://matierenoire.bandcamp.com/album/poussi-re-d-toiles-demo",
+        description: "The demo from my ambient one man black metal musical project.",
+        date: "2009 - 2016"
+    }
 ];
 
 export const experienceList = [
@@ -254,6 +272,29 @@ export const experienceList = [
 ];
 
 export const logEntries = [
+    /*{
+        id: "i-saw-ai-destroy-a-piece-of-german-history",
+        title: "I saw AI destroy a piece of german history, i.e. one of the most famous german newspapers company",
+        date: "11.04.2025",
+        content: `<p>Almost five years ago, I got hired on a big company dedicated to journalism, called Axel Springer. The name comes from its founder, a german tycoon who became rich and successful by founding Germany's first tabloid: Bild.</p>
+        <p>Everybody knows Bild in Germany. Everybody also knows its reputation and the reputation of its founder: focusing on sensationalism, big attractive and absolutely partial titles and, even sometimes, sharing not-so-fact-checked articles, aka nowadays "fake news". I still have this edition in mind in which on one page, there was an article complaining about immigrants committing more crime than "normal" Germans, and on the opposite page, an article about a racism scandal in Germany's biggest extreme-right party. I am pretty sure putting these two pages in front of each other, which would attract two types of people situated in both extreme opposite sides of the political spectrum, was absolutely on purpose. People pissed by an article would probably come back to buy the newspaper again.<br/>
+        Anyway, the point is: everybody in Germany knows Bild. Because everybody complains about it... but, most important, everybody reads it. Literally millions of daily readers enjoying the cheeky attitude of the newspaper, summed up by this internal slogan that still resonates in me: "Aber du liest es doch!", translating into something like "but, still, you're reading it!".</p>
+        <p>So, yeah, I worked for this group. But Springer does not come down to only Bild. There are big subsidiaries, in the classifieds business for instance, but also other newspapers that made me actually proud to work for. In the portfolio of the group, I could work for Welt and Politico. Welt had to be the most famous serious german newspaper where I am from, often quoted when something was happening in Germany. And Politico, well, we are talking about the go-to newspaper for diplomats and public servants in Washington. What made me also proud, was the work culture there. When I started at the tech branch of Axel Springer, there was this refreshing wind of freedom, work/life balance and free-thinking. The company was literally searching for engineers and product designers with a level of expertise only coming from unsual careers and unsual lifepaths. My own case. This was for me, the "Auslander", an incredible chance to integrate into the german society and get to work with amazingly talented people.</p>
+        
+        <p>But this month I left the company for another job. I won't even comment on managers promising me a promotion I definitely deserved but in the end refusing it because of "cost cuts". It turns out, the budget is definitely there and I just wanted in the end a title to show off on LinkedIn that after years of efforts, yeah, my career still slowly goes forward. Well, these are the usual shenanigans of the corporate world, right?</p>
+        <p>I won't even comment on the shady financial buy-out to get the principal investor out of the way and "go back to a family business". Dramatic shift in the philosophy of the company. A sudden return to the roots. I also won't comment further on the tech bro who got appointed as new CTO, "who studied computer science" and yet improbable decisions after another did everything to push the excellent talents who were keeping the ship afloat out of the door. I am not even including myself in these people. I have the tendency to always consider myself average, I left after lots of big names were already gone and, still, I could find a new job which offers twice a better environement.</p>
+        <p>The reason I left was the arrival of AI within the company and seeing managers one after another catching the virus.</p>
+        <p>Watch out! Before you tell yourself that this is yet another rant from an engineer trying to gatekeep his trade, which is now doable by any peasant with a computer: I use AI every single day. ChatGPT, Claude, Codex and its set of skills, RooCode, Copilot and Ollama with a set of open models. I even built a RAG tool which translates Figma designs into pull requests on GitHub (which I am, by the way, currently rebuilding from scratch, <a href="http://framecommit.app">check it out</a>). I *am* an AI user.</p>
+        <p>I have never been that efficient in my work. My mind tends easily to lose itself into details. "Why the hell is this method not working?" And I would spent ten times more time than necessary trying to achieve something, being called once a "submarine coder", starting a task, losing myself deep into it and coming back at the surface when the whole mission is done to a 100%. Now I don't do that anymore. I can deliver. No more algorithm that everybody knows but that I try to reinvent. I just get something that somewhat works, then understand its big picture and, finally, I can make my own jam, often better but with something that already works for the people waiting for me. This fits the way my mind works really good.</p>
+        
+
+
+        <p>To quote the CTO: "Jeder kann jetzt coden" ("Anybody can code now"). Proud to have "coded" a bot managing his schedule using OpenClaw. The same week, our security team was sending an email, company-wide, forbidding its use internally to avoid leaked secrets, security flaws introduction and explosion of costs. The peasants with computer were feeling like gods. Finally they will be able to get rid of these engineering divas who kept asking for indecent salaries while not be able to push a one word Jira ticket to "done" in five minutes. Now AI does it!</p>
+        <p>What these people couldn't understand: the peasants were us all this time long. Yes, *anybody* can code and it has always been like that. I made a career out of it while having in math the worst grades of my promotion and a questionable sense of logic. What made the difference was the will to learn. The will to understand what is happening in the machine. Owning your technical solution, owning your code. And writing your code was always the easiest step in this. But reading code and understanding what it does, especially if the code is from someone more skilled or your own self from six months before. The only difference AI made: it *can* make these processes faster.</p>
+        <p>I remember that one of my manager was until a few months ago sheltered from this virus. Then he got it from another manager showing him how to use Claude. He went apeshit crazy on a sunday evening when he was finding out that using words, he could get a webpage with javascript. He was proud telling us he spent his whole night working on it.</p>
+        <p>Then he told us, without any hesitation and realising the implication of such a sentence, that he stopped at 1AM because his app was not working anymore and he had no idea about what the code was missing. He was telling us "no idea why it was not working, but the gap to make it work can't be that small".</p>
+        <p>Mate, this very gap is what we call "software engineering".</p>`
+    },*/
     {
         id: "how-ai-makes-software-engineering-easier-and-faster-or-not",
         title: "How AI makes software engineering easier and faster (or not)",

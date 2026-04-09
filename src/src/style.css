@@ -111,6 +111,7 @@ ul{
                 }
 
                     #content .page #projects .project .thumbnailContainer .thumbnail{
+                        min-width: 66px;
                         max-width: 66%;
                     }
 
